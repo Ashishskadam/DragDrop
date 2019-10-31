@@ -1,0 +1,15 @@
+create table tbl_EventMoveRows(
+id int identity (1,1),
+userName varchar(20),
+row_count int,
+cr_dt datetime default getdate()
+)
+
+
+create table tbl_EventMoveRowDetails
+(
+id int identity(1,1),
+tbl_EventMoveRow_id int,
+eventId int,
+cr_dt datetime default getdate()
+)
